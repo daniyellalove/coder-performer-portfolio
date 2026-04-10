@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Daniyella Harmon — Developer & Performer',
-  description: 'Personal portfolio of a front-end developer and actor/model based in Houston, TX.',
+  description: 'Personal portfolio of a front-end developer and actor/model based in Austin, TX.',
   icons: {
     icon: '/dh-portfolio-favicon.svg',
   },

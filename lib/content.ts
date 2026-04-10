@@ -1,28 +1,28 @@
 import { Project, Credit } from './types';
 
 export const personalInfo = {
-  name: '[YOUR NAME]',
-  initials: 'YN',
-  location: 'Houston / Cypress, TX',
-  email: '[YOUR EMAIL]',
-  devTitle: 'Front-End Developer',
-  performerTitle: 'Actor & Model',
-  devSubtitle: 'Building interfaces that feel inevitable.',
-  performerSubtitle: 'Bringing characters to life on screen and in print.',
-  devBio: `I'm a front-end developer based in Houston, TX, crafting fast, accessible, and beautiful web experiences. My stack centers on React, TypeScript, and Next.js — with a deep appreciation for the details that make UIs feel right. I'm currently open to new projects and full-time opportunities.`,
-  performerBio: `Based in Houston / Cypress, TX, I'm an actor and model working across commercial, film, print, and digital media. I bring a grounded, versatile presence to every project — equally comfortable in a 30-second spot or a character-driven short film.`,
-  unifiedStory: `What links both worlds? Precision, presence, and storytelling. Whether I'm writing a component or inhabiting a character, the goal is the same: make it feel real.`,
+  name: '[DANIYELLA HARMON]',
+  initials: 'DH',
+  location: 'Austin / Houston, TX',
+  email: '[hdaniyella@gmail.com]',
+  devTitle: 'Front-End Developer | I build what you see.',
+  performerTitle: 'Actor & Model | I become what you remember.',
+  devSubtitle: 'Building clean, fast products people actually want to use.',
+  performerSubtitle: 'Actor and model fluent in commercial, film, and print.',
+  devBio: `I'm a front-end developer based in Austin, TX, crafting fast, accessible, and beautiful web experiences. My stack centers on React, TypeScript, and Next.js — with a deep appreciation for the details that make UIs feel right. I'm currently open to new projects and full-time opportunities.`,
+  performerBio: `Based in Austin / Houston, TX, I'm an actor and model working across commercial, film, print, and digital media. I bring a grounded, versatile presence to every project — equally comfortable in a 30-second spot or a character-driven film.`,
+  /*unifiedStory: `What links both worlds? Precision, presence, and storytelling. Whether I'm writing a component or inhabiting a character, the goal is the same: make it feel real.`,*/
   stack: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'],
   stats: {
-    height: "6'0\"",
+    height: "5'5\"",
     eyes: 'Brown',
     hair: 'Black',
     representation: 'Independent',
   },
   social: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com',
+    github: 'https://github.com/daniyellalove',
+    linkedin: 'https://linkedin.com/in/daniyella-harmon-work-with-me/',
+    instagram: 'https://instagram.com/daniyella.harmon',
     imdb: 'https://imdb.com',
   },
 };
