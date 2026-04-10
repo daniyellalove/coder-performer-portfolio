@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Fonts */
+    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-serif: Georgia, 'Times New Roman', serif;
+  }
+
+  /* ── Developer Mode (default) ───────────────────────────────── */
+  [data-mode="dev"],
+  :root {
+    --bg-primary: #f8f8f8;
+    --surface: #ffffff;
+    --text-primary: #0f0f0f;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --heading-font: var(--font-mono, ui-monospace, monospace);
+
+    --code-bg: #1e1e2e;
+    --code-header: #181825;
+    --code-text: #cdd6f4;
+
+    --tag-bg: #eff6ff;
+    --tag-border: #bfdbfe;
+
+    --input-bg: #ffffff;
+  }
+
+  /* ── Performer Mode ─────────────────────────────────────────── */
+  [data-mode="performer"] {
+    --bg-primary: #0e0e0e;
+    --surface: #161616;
+    --text-primary: #f5f0e8;
+    --text-secondary: #a8a090;
+    --text-muted: #6b6460;
+    --border: #2a2520;
+    --accent: #c9a96e;
+    --heading-font: var(--font-serif);
+
+    --code-bg: #161616;
+    --code-header: #111;
+    --code-text: #c9a96e;
+
+    --tag-bg: rgba(201, 169, 110, 0.08);
+    --tag-border: rgba(201, 169, 110, 0.25);
+
+    --input-bg: #1a1a1a;
+  }
+
+  /* ── Global transitions ─────────────────────────────────────── */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
+
+  /* But don't slow down transforms/opacity globally */
+  *:not([class*="motion"]) {
+    transition-property: background-color, border-color, color;
+  }
+}

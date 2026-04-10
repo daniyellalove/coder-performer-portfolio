@@ -1,0 +1,28 @@
+import type { Metadata } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
+import './globals.css';
+import { ModeProvider } from '@/components/ModeProvider';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
+
+export const metadata: Metadata = {
+  title: 'Daniyella Harmon — Developer & Performer',
+  description: 'Personal portfolio of a front-end developer and actor/model based in Houston, TX.',
+  icons: {
+    icon: '/dh-portfolio-favicon.svg',
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" data-mode="dev" suppressHydrationWarning>
+      <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
+        <ModeProvider>{children}</ModeProvider>
+      </body>
+    </html>
+  );
+}
