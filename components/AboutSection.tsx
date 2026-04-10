@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useMode } from './ModeProvider';
 import { personalInfo } from '@/lib/content';
@@ -39,7 +40,7 @@ export function AboutSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Bio */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,16 +52,18 @@ export function AboutSection() {
             <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               {isDev ? personalInfo.devBio : personalInfo.performerBio}
             </p>
-            <p
-              className="text-base leading-relaxed border-l-2 pl-4"
-              style={{
-                color: 'var(--text-secondary)',
-                borderColor: 'var(--accent)',
-                fontStyle: isDev ? 'normal' : 'italic',
-              }}
-            >
-              {personalInfo.unifiedStory}
-            </p>
+            {'unifiedStory' in personalInfo && (
+              <p
+                className="text-base leading-relaxed border-l-2 pl-4"
+                style={{
+                  color: 'var(--text-secondary)',
+                  borderColor: 'var(--accent)',
+                  fontStyle: isDev ? 'normal' : 'italic',
+                }}
+              >
+                {(personalInfo as typeof personalInfo & { unifiedStory: string }).unifiedStory}
+              </p>
+            )}
           </motion.div>
 
           {/* Side panel */}
@@ -85,6 +88,14 @@ export function AboutSection() {
 function DevSkills() {
   return (
     <div>
+      <Image
+        src="/IMG_7853.JPG"
+        alt="Profile photo"
+        width={160}
+        height={160}
+        className="rounded-2xl object-cover object-top mb-5"
+        style={{ width: '160px', height: '160px' }}
+      />
       <h3
         className="text-sm font-medium uppercase tracking-[0.15em] mb-5"
         style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}
