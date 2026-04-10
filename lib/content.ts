@@ -30,7 +30,7 @@ export const personalInfo = {
 export const projects: Project[] = [
   {
     id: 'p1',
-    title: 'Design System Kit',
+    title: 'HarmoNext',
     description: 'A component library built with React and TypeScript, shipped as an npm package with Storybook documentation.',
     stack: ['React', 'TypeScript', 'Storybook', 'Rollup'],
     tags: ['Open Source', 'UI/UX', 'Library'],
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     id: 'p2',
-    title: 'E-Commerce Dashboard',
+    title: 'E-Commerce Marketplace',
     description: 'Full-stack admin dashboard with real-time analytics, inventory management, and role-based access control.',
     stack: ['Next.js', 'Tailwind', 'Prisma', 'PostgreSQL'],
     tags: ['Full Stack', 'SaaS', 'Dashboard'],
@@ -50,7 +50,7 @@ export const projects: Project[] = [
   },
   {
     id: 'p3',
-    title: 'Motion Portfolio Template',
+    title: 'Anime Tracker',
     description: 'An open-source portfolio starter with Framer Motion animations, dark mode, and CMS integration.',
     stack: ['Next.js', 'Framer Motion', 'Contentful'],
     tags: ['Template', 'Animation', 'CMS'],

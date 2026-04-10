@@ -15,40 +15,33 @@ export function AboutSection() {
         className="max-w-6xl mx-auto px-4 sm:px-6"
         style={{ borderTop: '1px solid var(--border)', paddingTop: '6rem' }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
-          <p
-            className="text-xs font-medium uppercase tracking-[0.2em] mb-3"
-            style={{ color: 'var(--accent)' }}
-          >
-            {isDev ? '// about me' : '— about'}
-          </p>
-          <h2
-            className="text-4xl sm:text-5xl font-bold"
-            style={{
-              color: 'var(--text-primary)',
-              fontFamily: 'var(--heading-font)',
-              fontStyle: isDev ? 'normal' : 'italic',
-            }}
-          >
-            About
-          </h2>
-        </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Bio */}
+          {/* Left: Heading + Bio */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col gap-5"
           >
+            <div className="mb-7">
+              <p
+                className="text-xs font-medium uppercase tracking-[0.2em] mb-3"
+                style={{ color: 'var(--accent)' }}
+              >
+                {isDev ? '// about me' : '— about'}
+              </p>
+              <h2
+                className="text-4xl sm:text-5xl font-bold"
+                style={{
+                  color: 'var(--text-primary)',
+                  fontFamily: 'var(--heading-font)',
+                  fontStyle: isDev ? 'normal' : 'italic',
+                }}
+              >
+                About
+              </h2>
+            </div>
             <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               {isDev ? personalInfo.devBio : personalInfo.performerBio}
             </p>
@@ -66,7 +59,7 @@ export function AboutSection() {
             )}
           </motion.div>
 
-          {/* Side panel */}
+          {/* Right: Side panel */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
